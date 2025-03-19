@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<h4>@Request["Id"]</h4>     //HTTPRequestBase object
+<h4>@ViewBag.Email</h4>    //FormCollection object
+<h4>@ViewBag.Name</h4>
+
+
+<form method="post">
+    <input type="text" class="form-control" placeholder="Name" name="Name" />
+    <p class="text-danger">@Html.ValidationMessage("Name")</p>
+    <input type="text" class="form-control" placeholder="Id" name="Id" />
+    <p class="text-danger">@Html.ValidationMessage("Id")</p>
+    <input type="text" class="form-control" placeholder="Email" name="Email" />
+    <p class="text-danger">@Html.ValidationMessage("Email")</p>
+    Gender
+    <input type="radio" name="Gender" value="Male" />Male
+    <input type="radio" name="Gender" value="Female" />Female
+    <p class="text-danger">@Html.ValidationMessage("Gender")</p>
+    <br />
+    <input type="submit" value="Add" class="btn btn-primary" />
+</form>
