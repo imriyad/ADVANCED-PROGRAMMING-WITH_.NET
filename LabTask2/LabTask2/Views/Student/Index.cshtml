@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@if (Model != null)
+{
+
+    <h5>@Model.Name</h5>
+    <h5>@Model.Id</h5>
+    <h5>@Model.DateOfBirth</h5>
+
+}
+<form method="post">
+    <input type="text" class="form-control" placeholder="Name" name="Name" />
+    <p class="text-danger">@Html.ValidationMessage("Name")</p>
+
+    <input type="text" class="form-control" placeholder="Id" name="Id" />
+    <p class="text-danger">@Html.ValidationMessage("Id")</p>
+
+    <input type="date" class="form-control" name="DateOfBirth" />
+    <p class="text-danger">@Html.ValidationMessage("DateOfBirth")</p>
+
+    <input type="text" class="form-control" placeholder="Email" name="Email" />
+    <p class="text-danger">@Html.ValidationMessage("Email")</p>
+
+    <input type="submit" value="Add" class="btn btn-primary" />
+</form>
+
