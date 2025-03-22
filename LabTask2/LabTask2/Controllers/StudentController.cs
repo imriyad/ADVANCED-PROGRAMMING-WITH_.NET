@@ -13,18 +13,19 @@ namespace LabTask2.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return View();
+            ViewBag.IsValid = ModelState.IsValid;
+
+            return View(new Student());
         }
         [HttpPost]
-       
         public ActionResult Index(Student s)
         {
             if (ModelState.IsValid)
             {
-                return RedirectToAction("Success"); 
+                return RedirectToAction("About", "Home");
             }
-
-            return View(s); 
+            return View(s);
         }
+
     }
 }
