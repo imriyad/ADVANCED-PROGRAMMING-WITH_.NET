@@ -4,6 +4,11 @@
 }
 
 <h2>Create</h2>
+
+@if(TempData["msg"]!=null)
+            {
+                <p class="alert alert-danger">@TempData["msg"]</p>
+            }
 <form method="post">
     <input type="text" name="Name" class="form-control" placeholder="Name" />
     <input type="date" name="Dob" class="form-control" placeholder="Dob" />
