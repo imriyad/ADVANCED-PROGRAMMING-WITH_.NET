@@ -1,0 +1,27 @@
+﻿@model ECommerceSite.DTOs.CustomerDTO
+@{
+    ViewBag.Title = "Registration";
+}
+<h2>Register</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(x => x.Name)
+    @Html.TextBoxFor(x => x.Name)
+    <br />
+
+    @Html.LabelFor(x => x.Address)
+    @Html.TextBoxFor(x => x.Address)
+    <br />
+
+    @Html.LabelFor(x => x.Email)
+    @Html.TextBoxFor(x => x.Email)
+    <br />
+
+    @Html.LabelFor(x => x.Password)
+    @Html.PasswordFor(x => x.Password)
+    <br />
+
+    <input type="submit" value="Register" />
+}
+<p>@TempData["Msg"]</p>
