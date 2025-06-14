@@ -1,0 +1,14 @@
+﻿@model StudentManagement.DAL.Models.Student
+
+<h2>Add Student</h2>
+
+@using (Html.BeginForm())
+{
+    <label>Name:</label> @Html.TextBoxFor(m => m.FullName)
+    <br />
+    <label>Age:</label> @Html.TextBoxFor(m => m.Age)
+    <br />
+    <label>Email:</label> @Html.TextBoxFor(m => m.Email)
+    <br />
+    <input type="submit" value="Add" />
+}
