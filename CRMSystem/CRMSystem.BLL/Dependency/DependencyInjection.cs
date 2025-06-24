@@ -33,6 +33,11 @@ namespace CRMSystem.BLL.Dependency
             container.RegisterType<ISaleRepository, SaleRepository>();
             container.RegisterType<ISaleService, SaleService>();
 
+            container.RegisterType<IEmailService, EmailService>();
+
+            container.RegisterType<IUserRepository, UserRepository>();
+            container.RegisterType<IUserService, UserService>();
+
 
         }
     }

@@ -1,5 +1,6 @@
 ﻿using CRMSystem.BLL.DTOs;
 using CRMSystem.BLL.Interfaces;
+using System;
 using System.Web.Http;
 
 namespace CRMSystem.Controllers
@@ -51,5 +52,23 @@ namespace CRMSystem.Controllers
             service.Delete(id);
             return Ok("Sale deleted");
         }
+        [HttpGet]
+        [Route("api/sales/filter")]
+
+        //for postman : https://localhost:44389/api/sales/filter?leadId=5&fromDate=2025-04-23T00:00:00&toDate=2025-07-24T00:00:00
+        public IHttpActionResult Filter(int? leadId = null, DateTime? fromDate = null, DateTime? toDate = null)
+        {
+            var filteredSales = service.GetFiltered(leadId, fromDate, toDate);
+            return Ok(filteredSales);
+        }
+        [HttpGet]
+        [Route("api/sales/report")]
+        public IHttpActionResult GetReport()
+        {
+            var data = service.GetSalesReport();
+            return Ok(data);
+        }
+
+
     }
 }

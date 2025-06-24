@@ -22,3 +22,5 @@ D:\All Class pdf notes\Semester 10\Adv .Net\Codes\ADVANCED-PROGRAMMING-WITH_.NET
 D:\All Class pdf notes\Semester 10\Adv .Net\Codes\ADVANCED-PROGRAMMING-WITH_.NET\CRMSystem\CRMSystem.DAL\bin\Debug\System.Web.Http.xml
 D:\All Class pdf notes\Semester 10\Adv .Net\Codes\ADVANCED-PROGRAMMING-WITH_.NET\CRMSystem\CRMSystem.DAL\obj\Debug\CRMSystem.DAL.Migrations.Leads.resources
 D:\All Class pdf notes\Semester 10\Adv .Net\Codes\ADVANCED-PROGRAMMING-WITH_.NET\CRMSystem\CRMSystem.DAL\obj\Debug\CRMSystem.DAL.Migrations.Contacts.resources
+D:\All Class pdf notes\Semester 10\Adv .Net\Codes\ADVANCED-PROGRAMMING-WITH_.NET\CRMSystem\CRMSystem.DAL\obj\Debug\CRMSystem.DAL.Migrations.Sales.resources
+D:\All Class pdf notes\Semester 10\Adv .Net\Codes\ADVANCED-PROGRAMMING-WITH_.NET\CRMSystem\CRMSystem.DAL\obj\Debug\CRMSystem.DAL.Migrations.UpdateLeadModel.resources

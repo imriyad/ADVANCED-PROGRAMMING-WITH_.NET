@@ -2,6 +2,7 @@
 using CRMSystem.DAL.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace CRMSystem.DAL.Repositories
 {
@@ -15,6 +16,22 @@ namespace CRMSystem.DAL.Repositories
         }
 
         public List<Sale> GetAll() => _context.Sales.ToList();
+
+        public List<Sale> GetFiltered(int? leadId, DateTime? fromDate, DateTime? toDate)
+        {
+            var query = _context.Sales.AsQueryable();
+
+            if (leadId.HasValue)
+                query = query.Where(s => s.LeadId == leadId.Value);
+
+            if (fromDate.HasValue)
+                query = query.Where(s => s.SaleDate >= fromDate.Value);
+
+            if (toDate.HasValue)
+                query = query.Where(s => s.SaleDate <= toDate.Value);
+
+            return query.ToList();
+        }
 
         public Sale GetById(int id) => _context.Sales.Find(id);
 
@@ -39,5 +56,6 @@ namespace CRMSystem.DAL.Repositories
                 _context.SaveChanges();
             }
         }
+        
     }
 }

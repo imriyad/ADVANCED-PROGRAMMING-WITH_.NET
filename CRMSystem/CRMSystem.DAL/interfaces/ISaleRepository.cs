@@ -1,4 +1,5 @@
 ﻿using CRMSystem.DAL.Models;
+using System;
 using System.Collections.Generic;
 
 namespace CRMSystem.DAL.Interfaces
@@ -10,5 +11,8 @@ namespace CRMSystem.DAL.Interfaces
         void Add(Sale sale);
         void Update(Sale sale);
         void Delete(int id);
+
+        List<Sale> GetFiltered(int? leadId, DateTime? fromDate, DateTime? toDate);
+
     }
 }

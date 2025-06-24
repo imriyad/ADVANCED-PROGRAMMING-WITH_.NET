@@ -1,4 +1,5 @@
 ﻿using CRMSystem.BLL.DTOs;
+using System;
 using System.Collections.Generic;
 
 namespace CRMSystem.BLL.Interfaces
@@ -10,5 +11,10 @@ namespace CRMSystem.BLL.Interfaces
         void Create(SaleDTO sale);
         void Update(SaleDTO sale);
         void Delete(int id);
+
+        List<SaleDTO> GetFiltered(int? leadId, DateTime? fromDate, DateTime? toDate);
+
+        List<SalesReportDTO> GetSalesReport();
+
     }
 }

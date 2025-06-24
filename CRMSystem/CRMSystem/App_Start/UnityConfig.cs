@@ -2,7 +2,7 @@
 using Unity;
 using Unity.WebApi;
 
-using CRMSystem.BLL.Dependency; // your BLL dependency registration helper
+using CRMSystem.BLL.Dependency; 
 
 namespace CRMSystem.App_Start
 {
